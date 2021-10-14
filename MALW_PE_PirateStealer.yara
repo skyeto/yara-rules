@@ -6,6 +6,7 @@ rule MALW_PE_PirateStealer {
         date = "2021-10-13"
     strings:
         $x1 = "PirateStealerBTW" ascii wide
+        $x2 = "6170692f776562686f6f6b73" ascii wide
     condition:
         uint16(0) == 0x5a4d
         and 1 of them
